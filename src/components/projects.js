@@ -30,18 +30,20 @@ export default function Projects() {
         <img src="images/projects.png" alt="projects" width="500" height="500" />
       </Grid>
       <Grid item xs={6}>
-	    	<Typography variant="h4" className={classes.name}>
-	      	<u>Projects</u>
-				</Typography>
-				<Typography variant="h6" className={classes.introduction} color="textSecondary">
-	      	I have developed some projects related to Web Development and Mobile App Development.
-				</Typography>
-				<Typography variant="h6" className={classes.introduction} color="textSecondary">
-	      	I have developed all type of work in projects related to frontend, backend and databse.
-				</Typography>
-				<Typography variant="h6" className={classes.introduction} color="textSecondary">
-	      	I have developed all web based projects in MERN Stack or LAMP Stack and Mobile App related projects in React-Native and Firebase.
-				</Typography>
+      	<Card className={classes.formcard}>
+			  	<Typography variant="h4" className={classes.name}>
+			    	<u>Projects</u>
+					</Typography>
+					<Typography variant="h6" className={classes.introduction} color="textSecondary">
+			    	I have developed some projects related to Web Development and Mobile App Development.
+					</Typography>
+					<Typography variant="h6" className={classes.introduction} color="textSecondary">
+			    	I have developed all type of work in projects related to frontend, backend and databse.
+					</Typography>
+					<Typography variant="h6" className={classes.introduction} color="textSecondary">
+			    	I have developed all web based projects in MERN Stack or LAMP Stack and Mobile App related projects in React-Native and Firebase.
+					</Typography>
+				</Card>
 	    </Grid>
 	  </Grid>
 	  <Typography variant="h4" align="center">
@@ -288,6 +290,9 @@ const useStyles = makeStyles((theme) => ({
   },
   skill: {
   	margin: '1%',
+  },
+  formcard: {
+  	padding: '3%',
   }
 }));
 

@@ -20,18 +20,20 @@ export default function Experiences() {
 		      <img src="images/experiences.png" alt="experiences" width="500" height="500" />
 		    </Grid>
 		    <Grid item xs={6}>
-		    	<Typography variant="h4" className={classes.name}>
-		      	<u>Experiences</u>
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-		      	I have done an Internship in my 2nd year at analysed.in.
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-		      	I have contributed in many projects in 5+ open source programs.
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-		      	I am also project admin and mentor of my project Easy-Job-Intern in 2 open source programs.
-					</Typography>
+				  <Card className={classes.formcard}>
+				  	<Typography variant="h4" className={classes.name}>
+				    	<u>Experiences</u>
+						</Typography>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+				    	I have done an Internship in my 2nd year at analysed.in.
+						</Typography>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+				    	I have contributed in many projects in 5+ open source programs.
+						</Typography>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+				    	I am also project admin and mentor of my project Easy-Job-Intern in 2 open source programs.
+						</Typography>
+					</Card>
 		    </Grid>
 		  </Grid>
     	<Typography variant="h4" align="center">
@@ -146,5 +148,8 @@ const useStyles = makeStyles((theme) => ({
   },
 	skill: {
 		margin: '1%',
+  },
+  formcard: {
+  	padding: '3%',
   }
 }));

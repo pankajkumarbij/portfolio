@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles, Typography, Grid, Card, Button } from '@material-ui/core';
-import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 
 export default function Education() {
@@ -13,19 +12,21 @@ export default function Education() {
 		      <img src="images/educations.png" alt="educations" width="500" height="500" />
 		    </Grid>
 		    <Grid item xs={6}>
-		    	<Typography variant="h4" className={classes.name}>
-		      	<u>Educations</u>
-					</Typography>
-					<br/>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-		      	I am pursuing my graduation from IIIT Manipur in Computer Science and Engineering Branch.
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-		      	I have learned the computer science core subjects in my collage curricular.
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-		      	Learned/Practice Some extra skills from youtube, educational websites or blogs and some training programs.
-					</Typography>
+		    	<Card className={classes.formcard}>
+				  	<Typography variant="h4" className={classes.name}>
+				    	<u>Educations</u>
+						</Typography>
+						<br/>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+				    	I am pursuing my graduation from IIIT Manipur in Computer Science and Engineering Branch.
+						</Typography>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+				    	I have learned the computer science core subjects in my collage curricular.
+						</Typography>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+				    	Learned/Practice Some extra skills from youtube, educational websites or blogs and some training programs.
+						</Typography>
+					</Card>
 		    </Grid>
 		  </Grid>
 		  <Typography variant="h4" align="center">
@@ -49,7 +50,7 @@ export default function Education() {
 		    			<Typography variant="h6" color="textSecondary">
 		          	CGPA: 8.20
 		    			</Typography>
-		    			<Button variant="contained" color="primary" size="medium" startIcon={<CloudDownloadIcon/>}>
+		    			<Button variant="contained" color="primary" size="medium" startIcon={<VisibilityIcon/>}>
 								Result
 							</Button>
 		      </Grid>
@@ -68,14 +69,14 @@ export default function Education() {
 		          	Swami Nityanand Sr. Sec. School, Danta (Sikar-RJ)
 		    			</Typography>
 		    			<Typography variant="h6" color="textSecondary">
-		          	10th and 12th class
+		          	Sinear Secondary and Secondary
 		    			</Typography>
 		    			<Typography variant="h6" color="textSecondary">
-		          	Percentage: 12th : 78.60% and 10th: 75.67%
+		          	Percentage: 12th : 78.60%
 		    			</Typography>
-		    			<Button variant="contained" color="primary" size="medium" startIcon={<CloudDownloadIcon/>}>
-								Result
-							</Button>
+		    			<Typography variant="h6" color="textSecondary">
+		          	Percentage: 10th: 75.67%
+		    			</Typography>
 		      </Grid>
 		    </Grid>
       </Card>
@@ -199,4 +200,7 @@ const useStyles = makeStyles((theme) => ({
   name: {
   	color: '#204a87',
   },
+  formcard: {
+  	padding: '3%',
+  }
 }));

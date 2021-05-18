@@ -1,9 +1,5 @@
 import React from 'react';
-import { makeStyles, Card, CardContent, CardActions, Collapse, Button, Typography, List, ListItem, ListItemText, Divider, Grid } from '@material-ui/core';
-import clsx from 'clsx';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import LanguageIcon from '@material-ui/icons/Language';
-import VisibilityIcon from '@material-ui/icons/Visibility';
+import { makeStyles, Card, CardContent, Button, Typography, Divider, Grid } from '@material-ui/core';
 
 export default function Experiences() {
   const classes = useStyles();

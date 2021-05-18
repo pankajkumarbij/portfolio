@@ -6,6 +6,7 @@ import Educations from './components/educations';
 import Experiences from './components/experiences';
 import Projects from './components/projects';
 import Opensource from './components/opensource';
+import Contact from './components/contact';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
   				<Route path="/experiences" component={Experiences} />
   				<Route path="/projects" component={Projects} />
   				<Route path="/opensource" component={Opensource} />
-  				<Route path="/contactme" component={Projects} />
+  				<Route path="/contactme" component={Contact} />
   			</Switch>
   		</Router>
   	</>
