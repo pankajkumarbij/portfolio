@@ -14,34 +14,36 @@ export default function Experiences() {
   };
   
   return (
-    <>
-    	<Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
-		  	<Grid item xs={6}>
-		      <img src="images/experiences.png" alt="experiences" width="500" height="500" />
-		    </Grid>
-		    <Grid item xs={6}>
-				  <Card className={classes.formcard}>
-				  	<Typography variant="h4" className={classes.name}>
-				    	<u>Experiences</u>
+		<div className={classes.containers}>
+			<Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
+				<Grid tem xs={12} sm={6} align="center" justify="center">
+					<img src="images/experiences.png" alt="experiences" className={classes.imgs} />
+				</Grid>
+				<Grid tem xs={12} sm={6}>
+					<Card className={classes.formcard}>
+					<Typography variant="h4" className={classes.name}>
+						<u>Experiences</u>
 						</Typography>
 						<Typography variant="h6" className={classes.introduction} color="textSecondary">
-				    	I have done an Internship in my 2nd year at analysed.in.
+						I have done an Internship in my 2nd year at analysed.in.
 						</Typography>
+						<Divider/>
 						<Typography variant="h6" className={classes.introduction} color="textSecondary">
-				    	I have contributed in many projects in 5+ open source programs.
+						I have contributed in many projects in 5+ open source programs.
 						</Typography>
+						<Divider/>
 						<Typography variant="h6" className={classes.introduction} color="textSecondary">
-				    	I am also project admin and mentor of my project Easy-Job-Intern in 2 open source programs.
+						I am also project admin and mentor of my project Easy-Job-Intern in 2 open source programs.
 						</Typography>
 					</Card>
-		    </Grid>
-		  </Grid>
-    	<Typography variant="h4" align="center">
-    	<u>Experiences</u>
-		</Typography>
-    <Grid container spacing={2} className={classes.containergrid}>
-	  		<Grid item xs={4}>
-	  			<Card>
+				</Grid>
+			</Grid>
+			<Typography variant="h4" align="center">
+			<u>Experiences</u>
+			</Typography>
+			<Grid container spacing={2} className={classes.containergrid}>
+				<Grid item xs={12} sm={4}>
+					<Card>
 						<Typography variant="h5" className={classes.cardheader}>
 							Web Development Internship
 						</Typography>
@@ -75,7 +77,7 @@ export default function Experiences() {
 						</CardContent>
 						<Divider/>
 						<CardActions disableSpacing>
-						  <Button variant="contained" color="primary" size="medium" startIcon={<VisibilityIcon/>} href="https://github.com/pankajkumarbij/covid19-tracker">
+							<Button variant="contained" color="primary" size="medium" startIcon={<VisibilityIcon/>} href="https://github.com/pankajkumarbij/covid19-tracker">
 								Certificate
 							</Button>
 							&nbsp;&nbsp;&nbsp;&nbsp;
@@ -85,14 +87,14 @@ export default function Experiences() {
 							&nbsp;&nbsp;&nbsp;&nbsp;
 							<Button variant="contained" size="medium" onClick={handleExpandClick}>
 								<ExpandMoreIcon className={clsx(classes.expand, {
-						      [classes.expandOpen]: expanded,
-						    })}/> 
-						    More
+								[classes.expandOpen]: expanded,
+							})}/> 
+							More
 							</Button>
 						</CardActions>
 						<Collapse in={expanded} timeout="auto" unmountOnExit>
-						  <CardContent>
-						  	<List component="nav" aria-label="secondary mailbox folders">
+							<CardContent>
+								<List component="nav" aria-label="secondary mailbox folders">
 									<ListItem>
 										<ListItemText secondary="Worked on development of user interface of Analysed platform." />
 									</ListItem>
@@ -108,48 +110,65 @@ export default function Experiences() {
 							</CardContent>
 						</Collapse>
 					</Card>
-	      </Grid>
-	    </Grid>
-	    </>
-  );
+				</Grid>
+			</Grid>
+		</div>
+	);
 }
 
 const useStyles = makeStyles((theme) => ({
-  containergrid: {
-  	padding: '3%',
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  cardheader:{
-  	padding: '3%',
-  	background: 'linear-gradient(45deg, #ff00cc, #3e1ae6)',
-  	color: 'white',
-  	fontWeight: 900,
-  },
-  cardsubheader:{
-  	fontWeight: 900,
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  introduction: {
-  	marginTop: '2%',
-  },
-  name: {
-  	color: '#204a87',
-  },
-	skill: {
-		margin: '1%',
-  },
-  formcard: {
-  	padding: '3%',
-  }
+containers: {
+	marginTop: '20%',
+	'@media (min-width:600px)': {
+		marginTop: '5%',
+	},
+},
+containergrid: {
+	padding: '3%',
+	display: "flex",
+	flexDirection: "row",
+	justifyContent: "center"
+},
+imgs: {
+	width: '90%',
+	'@media (min-width:600px)': {
+		width: '75%',
+	},
+},
+cardheader:{
+	padding: '3%',
+	background: 'linear-gradient(45deg, #ff00cc, #3e1ae6)',
+	color: 'white',
+	fontWeight: 900,
+},
+cardsubheader:{
+	fontWeight: 900,
+},
+expand: {
+	transform: 'rotate(0deg)',
+	marginLeft: 'auto',
+	transition: theme.transitions.create('transform', {
+		duration: theme.transitions.duration.shortest,
+	}),
+},
+expandOpen: {
+	transform: 'rotate(180deg)',
+},
+introduction: {
+	padding: '1%',
+	fontSize: '1.2rem',
+	'@media (min-width:600px)': {
+		fontSize: '1.3rem',
+	},
+},
+name: {
+	color: '#204a87',
+},
+skill: {
+	margin: '1%',
+},
+formcard: {
+	margin: '2%',
+	padding: '3%',
+}
 }));

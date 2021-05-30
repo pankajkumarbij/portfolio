@@ -14,18 +14,18 @@ export default function Contact() {
   const classes = useStyles();
 
   return (
-    <div>
-      <Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
-		    <Grid item xs={6}>
-		      <img src="images/address1.png" alt="address" width="500" height="500" />
-		    </Grid>
-		    <Grid item xs={6}>
+		<div className={classes.containers}>
+			<Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
+				<Grid tem xs={12} sm={6} align="center" justify="center">
+					<img src="images/address1.png" alt="address" className={classes.imgs} />
+				</Grid>
+				<Grid tem xs={12} sm={6}>
 					<Card className={classes.formcard}>
 						<Typography variant="h4" className={classes.name}>
-				    	<u>Contact Me</u>
+						<u>Contact Me</u>
 						</Typography>
 						<Typography variant="h6" className={classes.introduction} color="textSecondary">
-				    	I am available on almost every social media. You can message me, I will reply within 24 hours. 
+						I am available on almost every social media. You can message me, I will reply within 24 hours. 
 						</Typography>
 						<IconButton aria-label="facebook" color="primary">
 							<Facebook className={classes.socialicon} color="primary"/>
@@ -47,80 +47,104 @@ export default function Contact() {
 						</IconButton>
 						<br/>
 						<Typography variant="h6" className={classes.name}>
-				    	<u>Home Address</u>
+						<u>Home Address</u>
 						</Typography>
 						<Typography variant="h6" className={classes.introduction} color="textSecondary">
-				    	<i>Village: NayaBas, Post: Dudhawa, District: Sikar<br/> State: Rajasthan, Country: India, Pin Code: 332406</i>
+						<i>Village: NayaBas, Post: Dudhawa, District: Sikar<br/> State: Rajasthan, Country: India, Pin Code: 332406</i>
 						</Typography>
 						<br/>
-						<Button variant="contained" color="primary" size="large" startIcon={<VisibilityIcon/>}>
-							See My Resume
+						<Button variant="contained" color="primary" size="medium" startIcon={<VisibilityIcon/>}>
+							See Resume
 						</Button>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<Button variant="contained" color="secondary" size="large" startIcon={<MyLocationIcon/>}>
-							View on Google Map
+						<Button variant="contained" color="secondary" size="medium" startIcon={<MyLocationIcon/>}>
+							Google Map
 						</Button>
 					</Card>
-		    </Grid>
-		  </Grid>
-		  <Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
-		    <Grid item xs={6}>
-		      <img src="images/contact.png" alt="contact" width="500" height="500" />
-		    </Grid>
-		    <Grid item xs={6}>
-		    	<Typography variant="h4" className={classes.name}>
-		      	<u>Send Me Email Message</u>
+				</Grid>
+			</Grid>
+			<Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
+				<Grid tem xs={12} sm={6} align="center" justify="center">
+					<img src="images/contact.png" alt="contact" className={classes.imgs} />
+				</Grid>
+				<Grid tem xs={12} sm={6}>
+					<Typography variant="h4" className={classes.names}>
+					<u>Send Me Email Message</u>
 					</Typography>
 					<Card className={classes.formcard}>
 						<form noValidate autoComplete="off">
 							<TextField id="outlined-basic" label="Email" variant="outlined" className={classes.formfields}/><br/><br/>
 							<TextField id="outlined-basic" label="Subject" variant="outlined" className={classes.formfields}/><br/><br/>
 							<TextField
-						    id="outlined-multiline-static"
-						    label="Message"
-						    multiline
-						    rows={4}
-						    variant="outlined"
-						    className={classes.formfields}
-						  /><br/><br/>
-						  <Button variant="contained" color="primary" size="large" className={classes.formfields} startIcon={<SendIcon/>}>
+							id="outlined-multiline-static"
+							label="Message"
+							multiline
+							rows={4}
+							variant="outlined"
+							className={classes.formfields}
+						/><br/><br/>
+						<Button variant="contained" color="primary" size="large" className={classes.formfields} startIcon={<SendIcon/>}>
 								Send Message
 							</Button>
 						</form>
 					</Card>
-		    </Grid>
-		  </Grid>
-    </div>
-  );
+				</Grid>
+			</Grid>
+		</div>
+  	);
 }
 
 const useStyles = makeStyles((theme) => ({
-  containergrid: {
-  	paddingLeft: '3%',
-  	paddingRight: '3%',
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  name: {
-  	color: '#204a87',
-  },
-  introduction: {
-  	marginTop: '2%',
-  },
-  socialicon: {
-  	fontSize: 40,
-  },
-  What: {
-  	
-  },
-  skill: {
-  	margin: '1%',
-  },
-  formcard: {
-  	padding: '3%',
-  },
-  formfields: {
-  	width: '100%',
-  }
+containers: {
+	marginTop: '20%',
+	'@media (min-width:600px)': {
+		marginTop: '5%',
+	},
+},
+containergrid: {
+	padding: '3%',
+	display: "flex",
+	flexDirection: "row",
+	justifyContent: "center"
+},
+imgs: {
+	width: '90%',
+	'@media (min-width:600px)': {
+		width: '75%',
+	},
+},
+names: {
+	color: '#204a87',
+	padding: '1%',
+	fontSize: '1.5rem',
+	'@media (min-width:600px)': {
+		fontSize: '2rem',
+	},
+},
+name: {
+	color: '#204a87',
+},
+introduction: {
+	padding: '1%',
+	fontSize: '1.2rem',
+	'@media (min-width:600px)': {
+		fontSize: '1.3rem',
+	},
+},
+socialicon: {
+	fontSize: '1.8rem',
+	'@media (min-width:600px)': {
+		fontSize: '2.4rem',
+	},
+},
+skill: {
+	margin: '1%',
+},
+formcard: {
+	margin: '2%',
+	padding: '3%',
+},
+formfields: {
+	width: '100%',
+}
 }));

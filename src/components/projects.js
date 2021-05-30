@@ -24,34 +24,36 @@ export default function Projects() {
   };
   
   return (
-  	<>
-  	<Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
-    	<Grid item xs={6}>
-        <img src="images/projects.png" alt="projects" width="500" height="500" />
-      </Grid>
-      <Grid item xs={6}>
-      	<Card className={classes.formcard}>
-			  	<Typography variant="h4" className={classes.name}>
-			    	<u>Projects</u>
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-			    	I have developed some projects related to Web Development and Mobile App Development.
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-			    	I have developed all type of work in projects related to frontend, backend and databse.
-					</Typography>
-					<Typography variant="h6" className={classes.introduction} color="textSecondary">
-			    	I have developed all web based projects in MERN Stack or LAMP Stack and Mobile App related projects in React-Native and Firebase.
-					</Typography>
-				</Card>
-	    </Grid>
-	  </Grid>
-	  <Typography variant="h4" align="center">
-    	<u>Projects</u>
-		</Typography>
-    <Grid container spacing={2} className={classes.containergrid}>
-	  		<Grid item xs={4}>
-	  			<Card>
+		<div className={classes.containers}>
+			<Grid container spacing={3} className={classes.containergrid} alignItems="center" justify="center">
+				<Grid tem xs={12} sm={6} align="center" justify="center">
+					<img src="images/projects.png" alt="projects" className={classes.imgs} />
+				</Grid>
+				<Grid tem xs={12} sm={6}>
+					<Card className={classes.formcard}>
+						<Typography variant="h4" className={classes.name}>
+						<u>Projects</u>
+						</Typography>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+						I have developed some projects related to Web Development and Mobile App Development.
+						</Typography>
+						<Divider/>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+						I have developed all type of work in projects related to frontend, backend and databse.
+						</Typography>
+						<Divider/>
+						<Typography variant="h6" className={classes.introduction} color="textSecondary">
+						I have developed all web based projects in MERN Stack or LAMP Stack and Mobile App related projects in React-Native and Firebase.
+						</Typography>
+					</Card>
+				</Grid>
+			</Grid>
+			<Typography variant="h4" align="center">
+				<u>Projects</u>
+			</Typography>
+			<Grid container spacing={2} className={classes.containergrid}>
+				<Grid item xs={12} sm={4}>
+					<Card>
 						<Typography variant="h5" className={classes.cardheader}>
 							COVID-19 Tracker
 						</Typography>
@@ -82,7 +84,7 @@ export default function Projects() {
 						</CardContent>
 						<Divider/>
 						<CardActions disableSpacing>
-						  <Button variant="contained" color="primary" size="medium" startIcon={<GitHub/>} href="https://github.com/pankajkumarbij/covid19-tracker">
+							<Button variant="contained" color="primary" size="medium" startIcon={<GitHub/>} href="https://github.com/pankajkumarbij/covid19-tracker">
 								Github
 							</Button>
 							&nbsp;&nbsp;&nbsp;&nbsp;
@@ -92,14 +94,14 @@ export default function Projects() {
 							&nbsp;&nbsp;&nbsp;&nbsp;
 							<Button variant="contained" size="medium" onClick={handleExpandClick}>
 								<ExpandMoreIcon className={clsx(classes.expand, {
-						      [classes.expandOpen]: expanded,
-						    })}/> 
-						    More
+							[classes.expandOpen]: expanded,
+							})}/> 
+							More
 							</Button>
 						</CardActions>
 						<Collapse in={expanded} timeout="auto" unmountOnExit>
-						  <CardContent>
-						  	<List component="nav" aria-label="secondary mailbox folders">
+							<CardContent>
+								<List component="nav" aria-label="secondary mailbox folders">
 									<ListItem>
 										<ListItemText secondary="In this project, COVID-19 API is calling with the help of Node.js." />
 									</ListItem>
@@ -119,9 +121,9 @@ export default function Projects() {
 							</CardContent>
 						</Collapse>
 					</Card>
-	      </Grid>
-	      <Grid item xs={4}>
-	  			<Card>
+				</Grid>
+				<Grid item xs={12} sm={4}>
+					<Card>
 						<Typography variant="h5" className={classes.cardheader}>
 							Online SQL IDE/Code Editor
 						</Typography>
@@ -154,24 +156,24 @@ export default function Projects() {
 							</Button>
 						</CardContent>
 						<CardActions disableSpacing>
-						  <Button variant="contained" color="primary" size="medium" startIcon={<GitHub/>} href="https://github.com/pankajkumarbij/syntax-highlighter-and-auto-completion-for-sql">
+							<Button variant="contained" color="primary" size="medium" startIcon={<GitHub/>} href="https://github.com/pankajkumarbij/syntax-highlighter-and-auto-completion-for-sql">
 								Github
 							</Button>
 							&nbsp;&nbsp;&nbsp;&nbsp;
 							<Button variant="contained" color="secondary" size="medium" startIcon={<LanguageIcon/>}>
 								Website
 							</Button>
-						  &nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;
 							<Button variant="contained" size="medium" onClick={handleExpandClick2}>
 								<ExpandMoreIcon className={clsx(classes.expand, {
-						      [classes.expandOpen]: expanded2,
-						    })}/> 
-						    More
+							[classes.expandOpen]: expanded2,
+							})}/> 
+							More
 							</Button>
 						</CardActions>
 						<Collapse in={expanded2} timeout="auto" unmountOnExit>
-						  <CardContent>
-						  	<List component="nav" aria-label="secondary mailbox folders">
+							<CardContent>
+								<List component="nav" aria-label="secondary mailbox folders">
 									<ListItem>
 										<ListItemText secondary="In this project, We can use this online IDE for writing SQL code." />
 									</ListItem>
@@ -187,10 +189,10 @@ export default function Projects() {
 							</CardContent>
 						</Collapse>
 					</Card>
-	      </Grid>
-	      <Grid item xs={4}>
-	  			<Card>
-	  				<Typography variant="h5" className={classes.cardheader}>
+				</Grid>
+				<Grid item xs={12} sm={4}>
+					<Card>
+						<Typography variant="h5" className={classes.cardheader}>
 							Exam/Quiz Mobile App
 						</Typography>
 						<Typography variant="p" color="textSecondary" className={classes.cardsubheader}>
@@ -213,24 +215,24 @@ export default function Projects() {
 							</Button>
 						</CardContent>
 						<CardActions disableSpacing>
-						  <Button variant="contained" color="primary" size="medium" startIcon={<GitHub/>} href="https://github.com/pankajkumarbij/Exam-Quiz-Application">
+							<Button variant="contained" color="primary" size="medium" startIcon={<GitHub/>} href="https://github.com/pankajkumarbij/Exam-Quiz-Application">
 								Github
 							</Button>
 							&nbsp;&nbsp;&nbsp;&nbsp;
 							<Button variant="contained" color="secondary" size="medium" startIcon={<LanguageIcon/>}>
 								App
 							</Button>
-						  &nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;
 							<Button variant="contained" size="medium" onClick={handleExpandClick3}>
 								<ExpandMoreIcon className={clsx(classes.expand, {
-						      [classes.expandOpen]: expanded3,
-						    })}/> 
-						    More
+							[classes.expandOpen]: expanded3,
+							})}/> 
+							More
 							</Button>
 						</CardActions>
 						<Collapse in={expanded3} timeout="auto" unmountOnExit>
-						  <CardContent>
-						  	<List component="nav" aria-label="secondary mailbox folders">
+							<CardContent>
+								<List component="nav" aria-label="secondary mailbox folders">
 									<ListItem>
 										<ListItemText secondary="The main motive of this project is to make it easy for students to practice their skills." />
 									</ListItem>
@@ -250,49 +252,66 @@ export default function Projects() {
 							</CardContent>
 						</Collapse>
 					</Card>
-	      </Grid>
-	    </Grid>
-	    </>
-  );
+				</Grid>
+			</Grid>
+		</div>
+  	);
 }
 
 const useStyles = makeStyles((theme) => ({
-  containergrid: {
-  	padding: '3%',
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  cardheader:{
-  	padding: '3%',
-  	background: 'linear-gradient(45deg, #ff00cc, #3e1ae6)',
-  	color: 'white',
-  	fontWeight: 900,
-  },
-  cardsubheader:{
-  	fontWeight: 900,
-  },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
-  introduction: {
-  	marginTop: '2%',
-  },
-  name: {
-  	color: '#204a87',
-  },
-  skill: {
-  	margin: '1%',
-  },
-  formcard: {
-  	padding: '3%',
-  }
+containers: {
+	marginTop: '20%',
+	'@media (min-width:600px)': {
+		marginTop: '5%',
+	},
+},
+containergrid: {
+	padding: '3%',
+	display: "flex",
+	flexDirection: "row",
+	justifyContent: "center"
+},
+imgs: {
+	width: '90%',
+	'@media (min-width:600px)': {
+		width: '75%',
+	},
+},
+cardheader:{
+	padding: '3%',
+	background: 'linear-gradient(45deg, #ff00cc, #3e1ae6)',
+	color: 'white',
+	fontWeight: 900,
+},
+cardsubheader:{
+	fontWeight: 900,
+},
+expand: {
+	transform: 'rotate(0deg)',
+	marginLeft: 'auto',
+	transition: theme.transitions.create('transform', {
+		duration: theme.transitions.duration.shortest,
+	}),
+},
+expandOpen: {
+	transform: 'rotate(180deg)',
+},
+introduction: {
+	padding: '1%',
+	fontSize: '1.2rem',
+	'@media (min-width:600px)': {
+		fontSize: '1.3rem',
+	},
+},
+name: {
+	color: '#204a87',
+},
+skill: {
+	margin: '1%',
+},
+formcard: {
+	margin: '2%',
+	padding: '3%',
+}
 }));
 
