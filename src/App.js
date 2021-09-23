@@ -5,7 +5,6 @@ import Skills from './components/skills';
 import Educations from './components/educations';
 import Experiences from './components/experiences';
 import Projects from './components/projects';
-import Opensource from './components/opensource';
 import Contact from './components/contact';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
   				<Route path="/educations" component={Educations} />
   				<Route path="/experiences" component={Experiences} />
   				<Route path="/projects" component={Projects} />
-  				<Route path="/opensource" component={Opensource} />
   				<Route path="/contactme" component={Contact} />
   			</Switch>
   		</Router>

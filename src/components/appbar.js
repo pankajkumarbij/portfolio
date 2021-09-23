@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import { AppBar, Toolbar, Typography, makeStyles, Button, IconButton, Drawer } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
@@ -6,7 +7,6 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import WorkOutlineOutlinedIcon from '@material-ui/icons/WorkOutlineOutlined';
 import HistoryIcon from '@material-ui/icons/History';
 import ContactPhoneOutlinedIcon from '@material-ui/icons/ContactPhoneOutlined';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import BuildOutlinedIcon from '@material-ui/icons/BuildOutlined';
 
 const useStyles = makeStyles(() => ({
@@ -19,6 +19,8 @@ header: {
 },
 logo: {
     fontWeight: 900,
+    fontFamily: 'Bonheur Royale',
+    fontStyle: 'italic',
     textAlign: "left",
 },
 buttons: {
@@ -77,13 +79,12 @@ export default function Header() {
     const getDrawerChoices = () => {
         return (
             <div>
-                <Button color="primary" className={classes.buttons} startIcon={<HomeOutlinedIcon/>} href="/">Home</Button><br></br><br></br>
-				<Button color="primary" className={classes.buttons} startIcon={<BuildOutlinedIcon/>} href="/skills">Skills</Button><br></br><br></br>
-				<Button color="primary" className={classes.buttons} startIcon={<MenuBookIcon/>} href="/educations">Education</Button><br></br><br></br>
-				<Button color="primary" className={classes.buttons} startIcon={<HistoryIcon/>} href="/experiences">Experience</Button><br></br><br></br>
-				<Button color="primary" className={classes.buttons} startIcon={<WorkOutlineOutlinedIcon/>} href="/projects">Projects</Button><br></br><br></br>
-				<Button color="primary" className={classes.buttons} startIcon={<GitHubIcon/>} href="/opensource">Open Source</Button><br></br><br></br>
-				<Button color="primary" className={classes.buttons} startIcon={<ContactPhoneOutlinedIcon/>} href="/contactme">Contact Me</Button><br></br><br></br>
+                <Button color="primary" className={classes.buttons} startIcon={<HomeOutlinedIcon/>}><Link to='/'>Home</Link></Button><br></br><br></br>
+				<Button color="primary" className={classes.buttons} startIcon={<BuildOutlinedIcon/>}><Link to='/skills'>Skills</Link></Button><br></br><br></br>
+				<Button color="primary" className={classes.buttons} startIcon={<MenuBookIcon/>}><Link to='/educations'>Education</Link></Button><br></br><br></br>
+				<Button color="primary" className={classes.buttons} startIcon={<HistoryIcon/>}><Link to='/experiences'>Experience</Link></Button><br></br><br></br>
+				<Button color="primary" className={classes.buttons} startIcon={<WorkOutlineOutlinedIcon/>}><Link to='/projects'>Projects</Link></Button><br></br><br></br>
+				<Button color="primary" className={classes.buttons} startIcon={<ContactPhoneOutlinedIcon/>}><Link to='/contactme'>Contact Me</Link></Button><br></br><br></br>
             </div>
         );
     };
@@ -97,13 +98,12 @@ export default function Header() {
     const getMenuButtons = () => {
         return (
             <div>
-                <Button color="primary" className={classes.buttons} startIcon={<HomeOutlinedIcon/>} href="/">Home</Button>
-				<Button color="primary" className={classes.buttons} startIcon={<BuildOutlinedIcon/>} href="/skills">Skills</Button>
-				<Button color="primary" className={classes.buttons} startIcon={<MenuBookIcon/>} href="/educations">Education</Button>
-				<Button color="primary" className={classes.buttons} startIcon={<HistoryIcon/>} href="/experiences">Experience</Button>
-				<Button color="primary" className={classes.buttons} startIcon={<WorkOutlineOutlinedIcon/>} href="/projects">Projects</Button>
-				<Button color="primary" className={classes.buttons} startIcon={<GitHubIcon/>} href="/opensource">Open Source</Button>
-				<Button color="primary" className={classes.buttons} startIcon={<ContactPhoneOutlinedIcon/>} href="/contactme">Contact Me</Button>
+                <Button color="primary" className={classes.buttons} startIcon={<HomeOutlinedIcon/>}><Link to='/'>Home</Link></Button>
+				<Button color="primary" className={classes.buttons} startIcon={<BuildOutlinedIcon/>}><Link to='/skills'>Skills</Link></Button>
+				<Button color="primary" className={classes.buttons} startIcon={<MenuBookIcon/>}><Link to='/educations'>Education</Link></Button>
+				<Button color="primary" className={classes.buttons} startIcon={<HistoryIcon/>}><Link to='/experiences'>Experience</Link></Button>
+				<Button color="primary" className={classes.buttons} startIcon={<WorkOutlineOutlinedIcon/>}><Link to='/projects'>Projects</Link></Button>
+				<Button color="primary" className={classes.buttons} startIcon={<ContactPhoneOutlinedIcon/>}><Link to='/contactme'>Contact Me</Link></Button>
             </div>
         );
     };

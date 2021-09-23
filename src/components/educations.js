@@ -12,7 +12,7 @@ export default function Education() {
 					<img src="images/educations.png" alt="educations" className={classes.imgs}/>
 				</Grid>
 				<Grid item xs={12} sm={6}>
-					<Card className={classes.formcard}>
+					<div className={classes.formcard}>
 						<Typography variant="h4" className={classes.name}>
 							<u>Educations</u>
 						</Typography>
@@ -28,7 +28,7 @@ export default function Education() {
 						<Typography variant="h6" className={classes.introduction} color="textSecondary">
 						Learned/Practice Some extra skills from youtube, educational websites or blogs and some training programs.
 						</Typography>
-					</Card>
+					</div>
 				</Grid>
 			</Grid>
 			<Typography variant="h4" align="center">
@@ -207,6 +207,7 @@ card2: {
 introduction: {
 	padding: '1%',
 	fontSize: '1.2rem',
+	fontFamily: 'Roboto',
 	'@media (min-width:600px)': {
 		fontSize: '1.3rem',
 	},
@@ -219,11 +220,13 @@ imgs: {
 },
 name: {
 	color: '#204a87',
+	fontFamily: 'Roboto',
 },
 names: {
 	color: '#204a87',
 	paddingBottom: '1%',
 	fontSize: '1.5rem',
+	fontFamily: 'Roboto',
 	'@media (min-width:600px)': {
 		fontSize: '2rem',
 	},

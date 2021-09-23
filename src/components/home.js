@@ -21,7 +21,7 @@ export default function Home() {
 				<Grid item xs={12} sm={6} align = "center" justify = "center">
 					<Card className={classes.formcard}>
 						<Typography variant="h4" className={classes.name} align="left">
-							<u>Pankaj Kumar Bijarniya (pankajkumarbij)</u>
+							<u>Pankaj Kumar Bijarniya</u>
 						</Typography>
 						<Typography variant="h6" className={classes.introduction} color="textSecondary" align = "left">
 						I am currently pursuing B.tech from IIIT Manipur in Computer Science and Engineering Branch.
@@ -149,10 +149,12 @@ containergrid: {
 },
 name: {
 	color: '#204a87',
+	fontFamily: 'Roboto',
 },
 introduction: {
 	padding: '1%',
 	fontSize: '1.2rem',
+	fontFamily: 'Roboto',
 	'@media (min-width:600px)': {
 		fontSize: '1.3rem',
 	},
