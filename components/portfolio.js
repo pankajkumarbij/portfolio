@@ -30,7 +30,7 @@ export default function Portfolio() {
               <button onClick={()=>scrollDown("education")}><li className="text-white">Education</li></button>
               <button onClick={()=>scrollDown("projects")}><li className="text-white">Projects</li></button>
               <button onClick={()=>scrollDown("experience")}><li className="text-white">Experience</li></button>
-              <button onClick={()=>scrollDown("openSource")}><li className="text-white">Open Source</li></button>
+              <button onClick={()=>scrollDown("opensource")}><li className="text-white">Open Source</li></button>
             </ul>
           </div>
           <div>
@@ -151,6 +151,38 @@ export default function Portfolio() {
               </div>
             </li>
           </ol>
+        </div>
+
+        <div className="flex justify-center space-x-3 pt-40" id="skills">
+          <p className="text-white font-bold text-4xl">My</p>
+          <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Skills</p>
+        </div>
+
+        <div className="md:flex w-full px-2 md:px-44 py-12 justify-center">
+          <div className="flex-col">
+            <div className="flex">
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/cpp.png" alt="skill" className="w-8" />&nbsp;C/C++</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/java.png" alt="skill" className="w-7" />Java</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/javascript.png" alt="skill" className="w-8" />&nbsp;Javascript</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/python.png" alt="skill" className="w-8 mt-1" />&nbsp;Python</button>
+            </div>
+            <div className="flex mt-4">
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/html5.png" alt="skill" className="w-8" />&nbsp;HTML</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/css3.png" alt="skill" className="w-8" />&nbsp;CSS</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/react.png" alt="skill" className="w-8 mt-0.5" />&nbsp;React</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/react.png" alt="skill" className="w-8 mt-0.5" />&nbsp;React-Native</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/next.png" alt="skill" className="w-8 mt-0.5" />&nbsp;Next.js</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/bootstrap.png" alt="skill" className="w-8 mt-1" />&nbsp;Bootstrap</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/tailwind.png" alt="skill" className="w-8 mt-1.5" />&nbsp;TailwindCSS</button>
+            </div>
+            <div className="flex mt-4">
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/node.png" alt="skill" className="w-8" />&nbsp;Node.js</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/express.png" alt="skill" className="w-10 mt-1.5" />Express.js</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/php.png" alt="skill" className="w-8 mt-1.5" />&nbsp;PHP</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/mongodb.png" alt="skill" className="w-8 mt-1.5" />&nbsp;MongoDB</button>
+              <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/mysql.png" alt="skill" className="w-8" />&nbsp;MySQL</button>
+            </div>
+          </div>
         </div>
 
         <div className="flex justify-center space-x-3 pt-40" id="experience">
@@ -368,6 +400,15 @@ export default function Portfolio() {
 
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-center space-x-3 pt-40" id="opensource">
+          <p className="text-white font-bold text-4xl">Open</p>
+          <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Source</p>
+        </div>
+
+        <div className="md:flex w-full px-2 md:px-44 py-12 justify-center">
+          <a href="https://stardev.io/developers/pankajkumarbij"><img alt="Check out pankajkumarbij's profile on stardev.io" src="https://stardev.io/developers/pankajkumarbij/badge/languages/global.svg" /></a>
         </div>
 
         <div className="flex justify-center space-x-3 pt-40" id="contact">
