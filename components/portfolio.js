@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FiDownload, FiMail, FiPhoneCall, FiSend } from 'react-icons/fi';
-import  { FaGithub, FaGraduationCap, FaLinkedin } from 'react-icons/fa';
+import  { FaGithub, FaGraduationCap, FaLinkedin, FaBars } from 'react-icons/fa';
 import { BsChevronDoubleDown, BsChevronDoubleUp } from 'react-icons/bs';
 
 export default function Portfolio() {
@@ -8,7 +8,9 @@ export default function Portfolio() {
   const [visPro1, setVisPro1] = useState(false); 
   const [visPro2, setVisPro2] = useState(false); 
   const [visPro3, setVisPro3] = useState(false); 
-  const [visPro4, setVisPro4] = useState(false); 
+  const [visPro4, setVisPro4] = useState(false);
+
+  const [toggle, setTogle] = useState(false);
 
   function scrollDown(id) {
     const element = document.getElementById(id);
@@ -19,26 +21,30 @@ export default function Portfolio() {
     <div>
       <div className="bg-navblue h-full w-full font-serif">
 
-        <div className="w-full flex px-2 md:px-44 py-4 justify-between fixed top-0 bg-navblue">
-          <div>
+        <div className="w-full md:flex md:px-44 py-3 md:justify-between fixed top-0 bg-navblue border-b md:border-b shadow-2xl shadow-pink-800">
+          <div className="flex justify-between px-2">
             <button onClick={()=>scrollDown("personal")}><p className="font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Pankaj</p></button>
+            <div className="flex space-x-2">
+              <button onClick={()=>scrollDown("contact")} className="md:hidden flex text-white font-bold px-3 rounded-md bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400"><FiPhoneCall className="mt-2.5" /></button>
+              <button className="md:hidden" onClick={()=>setTogle(!toggle)}><FaBars className="text-white text-2xl"/></button>
+            </div>
           </div>
-          <div>
-            <ul className="flex flex-col md:flex-row space-x-8 mt-1.5">
-              <button onClick={()=>scrollDown("about")}><li className="text-white">About</li></button>
-              <button onClick={()=>scrollDown("skills")}><li className="text-white">Skills</li></button>
-              <button onClick={()=>scrollDown("education")}><li className="text-white">Education</li></button>
-              <button onClick={()=>scrollDown("projects")}><li className="text-white">Projects</li></button>
-              <button onClick={()=>scrollDown("experience")}><li className="text-white">Experience</li></button>
-              <button onClick={()=>scrollDown("opensource")}><li className="text-white">Open Source</li></button>
+          <div className={(toggle ? "hidden md:block " : "mt-3 md:mt-0 ")+"bg-gray-700 md:bg-transparent"}>
+            <ul className="flex flex-col md:flex-row md:space-x-6 mt-1.5">
+              <button onClick={()=>{scrollDown("about"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">About</li></button>
+              <button onClick={()=>{scrollDown("skills"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Skills</li></button>
+              <button onClick={()=>{scrollDown("education"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Education</li></button>
+              <button onClick={()=>{scrollDown("projects"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Projects</li></button>
+              <button onClick={()=>{scrollDown("experience"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Experience</li></button>
+              <button onClick={()=>{scrollDown("opensource"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Open Source</li></button>
             </ul>
           </div>
-          <div>
+          <div className={(toggle ? "hidden md:block " : "hidden md:block ")+""}>
             <button onClick={()=>scrollDown("contact")} className="flex text-white font-bold px-3 py-2 rounded-md bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400"><FiPhoneCall className="mt-0.5 mr-2" />Contact Me</button>
           </div>
         </div>
 
-        <div className="md:flex w-full px-2 md:px-44 py-12 pt-40" id="personal">
+        <div className="md:flex w-full px-2 md:px-44 py-12 pt-16 md:pt-40" id="personal">
           <div className="flex w-full md:w-1/2 justify-start">
             <div className="space-y-2 mt-12">
               <p className="text-gray-300">WELCOME TO MY WORLD</p>
@@ -57,7 +63,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="md:flex w-full px-2 md:px-44 py-12 pt-40" id="about">
+        <div className="md:flex w-full px-2 md:px-44 py-12 pt-24 md:pt-40" id="about">
           <div className="flex w-full md:w-1/2 justify-start">
             <img src="./about6.png" alt="home" className="w-10/12" />
           </div>
@@ -77,7 +83,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-3 pt-40" id="education">
+        <div className="flex justify-center space-x-3 pt-24 md:pt-40" id="education">
           <p className="text-white font-bold text-4xl">My</p>
           <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Education</p>
         </div>
@@ -92,7 +98,7 @@ export default function Portfolio() {
                 </div>
                 <div className="hidden sm:flex w-full bg-white h-0.5"></div>
               </div>
-              <div className="mt-3 bg-white rounded-md p-4 shadow-lg shadow-orange-700 mx-4">
+              <div className="mt-3 bg-white rounded-md p-4 shadow-lg shadow-pink-800 mx-4">
                 <div className="w-full flex justify-center">
                   <img src="iiitm.png" alt="logo" width="177" />
                 </div>
@@ -114,7 +120,7 @@ export default function Portfolio() {
                 </div>
                 <div className="hidden sm:flex w-full bg-white h-0.5"></div>
               </div>
-              <div className="mt-3 bg-white rounded-md p-4 shadow-lg shadow-orange-700 mx-4">
+              <div className="mt-3 bg-white rounded-md p-4 shadow-lg shadow-pink-800 mx-4">
                 <div className="w-full flex justify-center">
                   <img src="bser.png" alt="logo" width="150" />
                 </div>
@@ -136,7 +142,7 @@ export default function Portfolio() {
                 </div>
                 <div className="hidden sm:flex w-full bg-white h-0.5"></div>
               </div>
-              <div className="mt-3 bg-white rounded-md p-4 shadow-lg shadow-orange-700 mx-4">
+              <div className="mt-3 bg-white rounded-md p-4 shadow-lg shadow-pink-800 mx-4">
                 <div className="w-full flex justify-center">
                   <img src="bser.png" alt="logo" width="150" />
                 </div>
@@ -153,7 +159,7 @@ export default function Portfolio() {
           </ol>
         </div>
 
-        <div className="flex justify-center space-x-3 pt-40" id="skills">
+        <div className="flex justify-center space-x-3 pt-24 md:pt-40" id="skills">
           <p className="text-white font-bold text-4xl">My</p>
           <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Skills</p>
         </div>
@@ -185,7 +191,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-3 pt-40" id="experience">
+        <div className="flex justify-center space-x-3 pt-24 md:pt-40" id="experience">
           <p className="text-white font-bold text-4xl">Job</p>
           <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Experience</p>
         </div>
@@ -201,7 +207,7 @@ export default function Portfolio() {
                 <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
                   <h1 className="mx-auto font-semibold text-lg text-navblue">1</h1>
                 </div>
-                <div className="order-1 rounded-lg shadow-xl shadow-orange-700 w-5/12">
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
                   <div className="bg-white rounded-md p-4">
                     <div className="w-full flex justify-center">
                       <img src="transposeon.png" alt="logo" width="177" />
@@ -222,7 +228,7 @@ export default function Portfolio() {
                 <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
                   <h1 className="mx-auto text-navblue font-semibold text-lg">2</h1>
                 </div>
-                <div className="order-1 rounded-lg shadow-xl shadow-orange-700 w-5/12">
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
                   <div className="bg-white rounded-md p-4">
                     <div className="w-full flex justify-center">
                       <img src="asthara.png" alt="logo" width="177" />
@@ -242,7 +248,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-3 pt-40" id="projects">
+        <div className="flex justify-center space-x-3 pt-24 md:pt-40" id="projects">
           <p className="text-white font-bold text-4xl">My</p>
           <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Projects</p>
         </div>
@@ -258,7 +264,7 @@ export default function Portfolio() {
                 <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
                   <h1 className="mx-auto font-semibold text-lg text-navblue">1</h1>
                 </div>
-                <div className="order-1 rounded-lg shadow-xl shadow-orange-700 w-5/12">
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
                   <div className="bg-white rounded-md border">
                     <h3 className="text-lg font-bold text-navblue flex justify-center py-1">Codeish (An E-Learning Platform)</h3>
                     <div className="w-full flex justify-center">
@@ -294,7 +300,7 @@ export default function Portfolio() {
                 <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
                   <h1 className="mx-auto text-navblue font-semibold text-lg">2</h1>
                 </div>
-                <div className="order-1 rounded-lg shadow-xl shadow-orange-700 w-5/12">
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
                   <div className="bg-white rounded-md border">
                     <h3 className="text-lg font-bold text-navblue flex justify-center py-1">Hale Metal India (An E-Commerce Platform)</h3>
                     <div className="w-full flex justify-center">
@@ -330,7 +336,7 @@ export default function Portfolio() {
                 <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
                   <h1 className="mx-auto font-semibold text-lg text-navblue">3</h1>
                 </div>
-                <div className="order-1 rounded-lg shadow-xl shadow-orange-700 w-5/12">
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
                   <div className="bg-white rounded-md border">
                     <h3 className="text-lg font-bold text-navblue flex justify-center py-1">Quiz Mobile Application</h3>
                     <div className="w-full flex justify-center">
@@ -367,7 +373,7 @@ export default function Portfolio() {
                 <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
                   <h1 className="mx-auto text-navblue font-semibold text-lg">4</h1>
                 </div>
-                <div className="order-1 rounded-lg shadow-xl shadow-orange-700 w-5/12">
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
                   <div className="bg-white rounded-md border">
                     <h3 className="text-lg font-bold text-navblue flex justify-center py-1">Syntax Highlighter and Auto-completion for SQL</h3>
                     <div className="w-full flex justify-center">
@@ -402,7 +408,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-3 pt-40" id="opensource">
+        <div className="flex justify-center space-x-3 pt-24 md:pt-40" id="opensource">
           <p className="text-white font-bold text-4xl">Open</p>
           <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Source</p>
         </div>
@@ -411,7 +417,7 @@ export default function Portfolio() {
           <a href="https://stardev.io/developers/pankajkumarbij"><img alt="Check out pankajkumarbij's profile on stardev.io" src="https://stardev.io/developers/pankajkumarbij/badge/languages/global.svg" /></a>
         </div>
 
-        <div className="flex justify-center space-x-3 pt-40" id="contact">
+        <div className="flex justify-center space-x-3 pt-24 md:pt-40" id="contact">
           <p className="text-white font-bold text-4xl">Contact</p>
           <p className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-orange-400">Me</p>
         </div>
@@ -421,7 +427,7 @@ export default function Portfolio() {
             <div className="flex w-full md:w-1/2 justify-center">
               <img src="./contact.png" alt="home" className="w-8/12" />
             </div>
-            <div className="flex w-full md:w-1/2 justify-center">
+            <div className="flex w-full md:w-1/2 justify-center pb-12">
               <div className="mt-12 w-10/12">
                 <div className="flex justify-between mb-4">
                     <input type="text" className="w-1/2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md p-2.5" placeholder="First Name"/>
