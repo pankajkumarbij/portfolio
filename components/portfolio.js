@@ -10,7 +10,7 @@ export default function Portfolio() {
   const [visPro3, setVisPro3] = useState(false); 
   const [visPro4, setVisPro4] = useState(false);
 
-  const [toggle, setTogle] = useState(false);
+  const [toggle, setTogle] = useState(true);
 
   function scrollDown(id) {
     const element = document.getElementById(id);
@@ -53,8 +53,8 @@ export default function Portfolio() {
               <p className="text-gray-300 text-lg">I'm the software developer at Asthara Agro in India</p>
               <p className="text-gray-300 text-lg">Visit my profile and Stay connected with me</p>
               <div className="flex justify-between">
-                <button className="flex justify-center w-5/12 text-white font-bold px-4 py-2 mt-8 rounded-md bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400"><FiDownload className="mt-0.5 mr-2" />My Resume</button>
-                <button className="flex justify-center w-5/12 text-white font-bold px-4 py-2 mt-8 rounded-md bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400 md:mr-3"><FiMail className="mt-0.5 mr-2" />Hire Me</button>
+                <button className="flex justify-center w-5/12 text-white font-bold px-1 md:px-4 py-2 mt-4 md:mt-8 rounded-md bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400"><FiDownload className="mt-0.5 mr-2" />My Resume</button>
+                <button className="flex justify-center w-5/12 text-white font-bold px-1 md:px-4 py-2 mt-4 md:mt-8 rounded-md bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400 md:mr-3"><FiMail className="mt-0.5 mr-2" />Hire Me</button>
               </div>
             </div>
           </div>
