@@ -166,13 +166,13 @@ export default function Portfolio() {
 
         <div className="md:flex w-full px-2 md:px-44 py-12 justify-center">
           <div className="flex-col">
-            <div className="md: flex">
+            <div className="md:flex">
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/cpp.png" alt="skill" className="w-8" />&nbsp;C/C++</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/java.png" alt="skill" className="w-7" />Java</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/javascript.png" alt="skill" className="w-8" />&nbsp;Javascript</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/python.png" alt="skill" className="w-8 mt-1" />&nbsp;Python</button>
             </div>
-            <div className="md: flex mt-4">
+            <div className="md:flex mt-4">
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/html5.png" alt="skill" className="w-8" />&nbsp;HTML</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/css3.png" alt="skill" className="w-8" />&nbsp;CSS</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/react.png" alt="skill" className="w-8 mt-0.5" />&nbsp;React</button>
