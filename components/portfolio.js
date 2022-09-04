@@ -29,14 +29,14 @@ export default function Portfolio() {
               <button className="md:hidden" onClick={()=>setTogle(!toggle)}><FaBars className="text-white text-2xl"/></button>
             </div>
           </div>
-          <div className={(toggle ? "hidden md:block " : "mt-3 md:mt-0 ")+"bg-gray-700 md:bg-transparent"}>
+          <div className={(toggle ? "hidden md:block " : "mt-3 md:mt-0 ")+"md:bg-transparent"}>
             <ul className="flex flex-col md:flex-row md:space-x-6 mt-1.5">
-              <button onClick={()=>{scrollDown("about"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">About</li></button>
-              <button onClick={()=>{scrollDown("skills"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Skills</li></button>
-              <button onClick={()=>{scrollDown("education"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Education</li></button>
-              <button onClick={()=>{scrollDown("projects"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Projects</li></button>
-              <button onClick={()=>{scrollDown("experience"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Experience</li></button>
-              <button onClick={()=>{scrollDown("opensource"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-gray-300 hover:text-navblue md:rounded-sm px-2">Open Source</li></button>
+              <button onClick={()=>{scrollDown("about"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-pink-400 md:rounded-md px-2">About</li></button>
+              <button onClick={()=>{scrollDown("skills"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-pink-400 md:rounded-md px-2">Skills</li></button>
+              <button onClick={()=>{scrollDown("education"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-pink-400 md:rounded-md px-2">Education</li></button>
+              <button onClick={()=>{scrollDown("projects"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-pink-400 md:rounded-md px-2">Projects</li></button>
+              <button onClick={()=>{scrollDown("experience"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-pink-400 md:rounded-md px-2">Experience</li></button>
+              <button onClick={()=>{scrollDown("opensource"), setTogle(!toggle)}}><li className="text-white flex justify-start mx-1 md:mx-0 border-t border-gray-400 md:border-t-0 py-2 md:py-0 hover:bg-pink-400 md:rounded-md px-2">Open Source</li></button>
             </ul>
           </div>
           <div className={(toggle ? "hidden md:block " : "hidden md:block ")+""}>
@@ -166,13 +166,13 @@ export default function Portfolio() {
 
         <div className="md:flex w-full px-2 md:px-44 py-12 justify-center">
           <div className="flex-col">
-            <div className="flex">
+            <div className="md: flex">
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/cpp.png" alt="skill" className="w-8" />&nbsp;C/C++</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/java.png" alt="skill" className="w-7" />Java</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/javascript.png" alt="skill" className="w-8" />&nbsp;Javascript</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/python.png" alt="skill" className="w-8 mt-1" />&nbsp;Python</button>
             </div>
-            <div className="flex mt-4">
+            <div className="md: flex mt-4">
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/html5.png" alt="skill" className="w-8" />&nbsp;HTML</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/css3.png" alt="skill" className="w-8" />&nbsp;CSS</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/react.png" alt="skill" className="w-8 mt-0.5" />&nbsp;React</button>
@@ -181,7 +181,7 @@ export default function Portfolio() {
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/bootstrap.png" alt="skill" className="w-8 mt-1" />&nbsp;Bootstrap</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/tailwind.png" alt="skill" className="w-8 mt-1.5" />&nbsp;TailwindCSS</button>
             </div>
-            <div className="flex mt-4">
+            <div className="md:flex mt-4">
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/node.png" alt="skill" className="w-8" />&nbsp;Node.js</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/express.png" alt="skill" className="w-10 mt-1.5" />Express.js</button>
               <button className="text-white text-2xl mx-2 flex justify-center border rounded-md px-2 py-1"><img src="./images/php.png" alt="skill" className="w-8 mt-1.5" />&nbsp;PHP</button>
@@ -237,6 +237,48 @@ export default function Portfolio() {
                     <h3 className="text-sm font-semibold text-gray-500 flex justify-center">Full-Stack Software Developer</h3>
                     <div className="flex justify-between mt-1">
                       <p className="mb-2 text-sm font-normal leading-none text-gray-600 flex justify-center">Oct 2021 - Apr 2022</p>
+                      <p className="mb-2 text-sm font-normal leading-none text-gray-600 flex justify-center">Type: Internship</p>
+                    </div>
+                    <button className="text-white w-full bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400 rounded-md py-1 px-1 mt-2">See My Result</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                <div className="order-1 w-5/12"></div>
+                <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
+                  <h1 className="mx-auto font-semibold text-lg text-navblue">3</h1>
+                </div>
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
+                  <div className="bg-white rounded-md p-4">
+                    <div className="w-full flex justify-center">
+                      <img src="virtusa.jpeg" alt="logo" width="177" />
+                    </div>
+                    <h3 className="text-lg font-bold text-navblue flex justify-center">Virtusa Private Limited</h3>
+                    <h3 className="text-sm font-semibold text-gray-500 flex justify-center">Software Engineer</h3>
+                    <div className="flex justify-between mt-1">
+                      <p className="mb-2 text-sm font-normal leading-none text-gray-600 flex justify-center">Dec 2021 - Mar 2022</p>
+                      <p className="mb-2 text-sm font-normal leading-none text-gray-600 flex justify-center">Type: Internship</p>
+                    </div>
+                    <button className="text-white w-full bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400 rounded-md py-1 px-1 mt-2">See My Result</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div className="order-1 w-5/12"></div>
+                <div className="z-20 flex items-center order-1 bg-white shadow-xl w-8 h-8 rounded-full">
+                  <h1 className="mx-auto text-navblue font-semibold text-lg">4</h1>
+                </div>
+                <div className="order-1 rounded-lg shadow-xl shadow-pink-800 w-5/12">
+                  <div className="bg-white rounded-md p-4">
+                    <div className="w-full flex justify-center">
+                      <img src="analysed.jpeg" alt="logo" width="177" />
+                    </div>
+                    <h3 className="text-lg font-bold text-navblue flex justify-center">Analysed.in</h3>
+                    <h3 className="text-sm font-semibold text-gray-500 flex justify-center">Web Developer</h3>
+                    <div className="flex justify-between mt-1">
+                      <p className="mb-2 text-sm font-normal leading-none text-gray-600 flex justify-center">Mar 2020 - May 2020</p>
                       <p className="mb-2 text-sm font-normal leading-none text-gray-600 flex justify-center">Type: Internship</p>
                     </div>
                     <button className="text-white w-full bg-gradient-to-r from-pink-400 to-orange-400 hover:from-orange-400 hover:to-pink-400 rounded-md py-1 px-1 mt-2">See My Result</button>
